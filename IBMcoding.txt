@@ -1,0 +1,12 @@
+--
+change line 57 on store.js file to "International Online Mall"
+--
+
+
+/* SQL query for adding an obsoleted column to shop.db */
+
+ALTER TABLE product ADD obsoleted varchar(255);
+
+/* marking obsoleted products in the database */
+
+UPDATE product SET obsoleted="YES" WHERE type="B" AND price>20;
